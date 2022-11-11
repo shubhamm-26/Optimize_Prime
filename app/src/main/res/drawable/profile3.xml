@@ -11,13 +11,14 @@
     </size>
 
     <solid
-        android:color="#6A8D96"
+        android:color="#536F77"
         ></solid>
     <corners
-        android:bottomLeftRadius="5000sp"
-        android:bottomRightRadius="5000sp"
+        android:bottomLeftRadius="150sp"
+        android:bottomRightRadius="150sp"
 
         ></corners>
+
 
 
 </shape>
