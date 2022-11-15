@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class signup extends AppCompatActivity {
 
     EditText student_id, password;
@@ -23,6 +25,7 @@ public class signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.signup);
+        getSupportActionBar().hide();
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
         Button button = findViewById(R.id.signup);
