@@ -82,7 +82,7 @@ public class Login extends AppCompatActivity {
   }
 
   public void openDashboard(){
-    Intent intent = new Intent(this, dashboard.class);
+    Intent intent = new Intent(this, nav_drawer.class);
     startActivity(intent);
   }
 }
