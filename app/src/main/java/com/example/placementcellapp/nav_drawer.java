@@ -23,6 +23,7 @@ public class nav_drawer extends AppCompatActivity
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.navigation);
         sNavigationDrawer = findViewById(R.id.nav_drawer);
         List<MenuItem> menuItems = new ArrayList<>();
