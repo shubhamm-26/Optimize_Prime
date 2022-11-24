@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+             android:layout_height="match_parent"
     android:background="@drawable/bg">
 
     <TextView
@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/avenir"
-        android:text="Sign Up"
+        android:text="Login"
         android:textColor="@color/blue"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.669"
-        app:cardBackgroundColor="@color/trans"
+        app:cardBackgroundColor="@color/white"
         app:cardElevation="5dp"
         app:cardUseCompatPadding="true">
 
@@ -55,37 +55,17 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.409" />
-
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="288dp"
-                android:layout_height="51dp"
-                android:backgroundTint="@color/black"
-                android:ems="10"
-                android:fontFamily="@font/avenir"
-                android:hint="Name"
-                android:inputType="numberSigned"
-                android:paddingLeft="12dp"
-                android:paddingTop="10dp"
-                android:paddingRight="15dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/studentID"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.632" />
+                app:layout_constraintVertical_bias="0.24" />
 
             <EditText
                 android:id="@+id/Password"
                 android:layout_width="288dp"
                 android:layout_height="51dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="28dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="@color/black"
                 android:drawableRight="@drawable/password_invisible"
                 android:ems="10"
@@ -108,15 +88,51 @@
                 android:background="@drawable/box4"
                 android:fontFamily="@font/avenir"
                 android:gravity="center"
-                android:text="SIGN UP"
+                android:text="LOGIN"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Password"
-                app:layout_constraintVertical_bias="0.504" />
+                app:layout_constraintVertical_bias="0.192" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="204dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/avenir"
+                android:text="Don't have an account ?"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login"
+                app:layout_constraintVertical_bias="0.357" />
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="107dp"
+                android:layout_height="48dp"
+                android:background="@color/trans"
+                android:paddingLeft="1dp"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.532"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login"
+                app:layout_constraintVertical_bias="0.637" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

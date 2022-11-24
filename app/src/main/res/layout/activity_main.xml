@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6A8D96"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -27,7 +27,7 @@
         android:fontFamily="@font/fontsfree"
         android:text="Placement\nCell"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

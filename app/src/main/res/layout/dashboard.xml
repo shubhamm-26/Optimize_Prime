@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
 
@@ -12,8 +12,7 @@
         android:id="@+id/image_slider"
         android:layout_width="match_parent"
         android:layout_height="222dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:background="@color/trans"
         app:iss_auto_cycle="true"
         app:iss_delay="0"
         app:iss_period="1000"
@@ -27,24 +26,24 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_slider"
         app:layout_constraintVertical_bias="0.0"
         app:tabGravity="center"
-        app:tabIndicator="@drawable/box2"
-        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorAnimationMode="fade"
         app:tabIndicatorGravity="stretch"
         app:tabSelectedTextColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        android:paddingTop="45dp">
+        android:paddingTop="45dp"
+        android:background="@color/trans">
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="360dp"
         android:layout_gravity="bottom"
         android:paddingTop="20dp"
@@ -53,7 +52,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tablayout"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        app:circularflow_radiusInDP="5dp">
 
     </androidx.viewpager2.widget.ViewPager2>
 
