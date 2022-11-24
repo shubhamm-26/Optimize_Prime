@@ -21,8 +21,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintVertical_bias="0.096"
+        />
 
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+        app:layout_constraintVertical_bias="0.0"
+        app:tabGravity="center"
+        app:tabIndicator="@drawable/box2"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorGravity="stretch"
+        app:tabSelectedTextColor="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        android:paddingTop="45dp">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager2"
+        android:layout_width="411dp"
+        android:layout_height="360dp"
+        android:layout_gravity="bottom"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.viewpager2.widget.ViewPager2>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
