@@ -1,9 +1,12 @@
 package com.example.placementcellapp;
 
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -21,7 +24,7 @@ public class dashboard extends Fragment
 {
         TabLayout tabLayout;
         ViewPager2 viewPager2;
-
+        TextView link;
         tab_adapter adapter;
 
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -65,6 +68,9 @@ public class dashboard extends Fragment
         slideModels.add(new SlideModel(R.drawable.mathworks,"Mathworks",ScaleTypes.FIT));
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
 
+        //hyperlink
+                link = root.findViewById(R.id.stats);
+                link.setMovementMethod(LinkMovementMethod.getInstance());
 
                 return root;
         }}

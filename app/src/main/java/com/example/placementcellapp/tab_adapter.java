@@ -22,9 +22,9 @@ public class tab_adapter extends FragmentStateAdapter
     public Fragment createFragment(int position) {
         if(position==1)
         {
-            return new tab_events();
+            return new tab_news();
         }
-        else return new tab_news();
+        else return new tab_events();
     }
 
 

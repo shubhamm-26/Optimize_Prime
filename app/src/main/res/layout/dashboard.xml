@@ -11,50 +11,68 @@
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/image_slider"
         android:layout_width="match_parent"
-        android:layout_height="222dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="416dp"
         android:background="@color/trans"
         app:iss_auto_cycle="true"
         app:iss_delay="0"
         app:iss_period="1000"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/stats"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096"
-        />
-
+        app:layout_constraintVertical_bias="0.066" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:background="@color/trans"
+        android:paddingTop="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_slider"
         app:layout_constraintVertical_bias="0.0"
         app:tabGravity="center"
+        app:tabIndicator="@drawable/box3"
         app:tabIndicatorAnimationMode="fade"
+        app:tabIndicatorColor="#75b2de"
         app:tabIndicatorGravity="stretch"
         app:tabSelectedTextColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        android:paddingTop="45dp"
-        android:background="@color/trans">
-    </com.google.android.material.tabs.TabLayout>
+        tools:ignore="MissingConstraints"></com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="322dp"
         android:layout_gravity="bottom"
         android:paddingTop="20dp"
+        app:circularflow_radiusInDP="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tablayout"
-        app:layout_constraintVertical_bias="1.0"
-        app:circularflow_radiusInDP="5dp">
+        app:layout_constraintVertical_bias="0.0">
 
     </androidx.viewpager2.widget.ViewPager2>
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/stats"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

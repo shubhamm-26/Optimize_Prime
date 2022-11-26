@@ -24,7 +24,7 @@ public class signup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.signup);
+        setContentView(layout.signup1);
         getSupportActionBar().hide();
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
