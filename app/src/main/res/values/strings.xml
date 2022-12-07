@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">open screen</string>
-    <string name="stats"><a href="https://sites.google.com/iiitvadodara.ac.in/placement2021/placement-statistics/b-tech?authuser=0">Placement Statistics</a></string>
+    <string name="stats"><a href="https://sites.google.com/iiitvadodara.ac.in/placement2021/placement-statistics/b-tech?authuser=0">Past Year Statistics</a></string>
     <string name="login">LOGIN</string>
     <string name="sign_up">REGISTER</string>
     <string name="instEmail">Institute Email Address</string>

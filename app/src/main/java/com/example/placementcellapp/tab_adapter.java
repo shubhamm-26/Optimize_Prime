@@ -10,7 +10,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class tab_adapter extends FragmentStateAdapter
 {
-    private final String[] fragmenttitle = new String[]{"events", "news"};
+    private final String[] fragmenttitle = new String[]{"BTech", "MTech"};
 
     public tab_adapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);

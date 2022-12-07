@@ -32,8 +32,8 @@ public class dashboard extends Fragment
                 ViewGroup root = (ViewGroup) inflater.inflate(R.layout.dashboard,container,false);
                 tabLayout = root.findViewById(R.id.tablayout);
                 viewPager2 = root.findViewById(R.id.view_pager2);
-                tabLayout.addTab(tabLayout.newTab().setText("Events"));
-                tabLayout.addTab(tabLayout.newTab().setText("News"));
+                tabLayout.addTab(tabLayout.newTab().setText("BTech"));
+                tabLayout.addTab(tabLayout.newTab().setText("MTech"));
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 adapter = new tab_adapter(fragmentManager,getLifecycle());
                 viewPager2.setAdapter(adapter);

@@ -27,10 +27,10 @@ public class nav_drawer extends AppCompatActivity
         setContentView(R.layout.navigation);
         sNavigationDrawer = findViewById(R.id.nav_drawer);
         List<MenuItem> menuItems = new ArrayList<>();
-        menuItems.add(new MenuItem("Home",R.drawable.profile_icon));
-        menuItems.add(new MenuItem("Profile",R.drawable.profile_icon));
-        menuItems.add(new MenuItem("Apply For jobs",R.drawable.apply_icon));
-        menuItems.add(new MenuItem("Applied Jobs",R.drawable.applied_jobs_icon));
+        menuItems.add(new MenuItem("Home",R.drawable.bg));
+        menuItems.add(new MenuItem("Profile",R.drawable.bg));
+        menuItems.add(new MenuItem("Apply For jobs",R.drawable.bg));
+        menuItems.add(new MenuItem("Applied Jobs",R.drawable.bg));
 
 
         sNavigationDrawer.setMenuItemList(menuItems);
