@@ -4,93 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".applied_jobs">
+    tools:context=".applied_jobs"
+    android:background="@drawable/bg">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Companies"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:backgroundTint="@color/trans"
+        android:outlineAmbientShadowColor="@color/trans"
+        android:outlineSpotShadowColor="@color/trans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/box6">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="5.5"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/img2"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_weight="4"
-            android:src="@drawable/adobe" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037"
+        tools:cardCornerRadius="16dp"
+        tools:cardElevation="5dp"
+        tools:cardUseCompatPadding="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:background="@drawable/box6"
-            android:weightSum="2">
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="0dp"
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1.3"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:background="@drawable/box6">
 
-                <TextView
-                    android:id="@+id/comp_name2"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="6dp"
-                    android:maxLines="1"
-                    android:text="Company Name"
-                    android:textColor="@color/Black"
-                    android:textSize="20sp" />
+                    android:orientation="vertical"
+                    android:weightSum="5.5"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/po2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="temp"
-                    android:textColor="@color/grey_font"
-                    android:textSize="12sp" />
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_weight="4"
+                        android:src="@drawable/adobe" />
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/box6"
+                        android:weightSum="2">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.7"
-                android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical"
+                            android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/post2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Position"
-                    android:textAlignment="center"
-                    android:textColor="#34deeb"
-                    android:textSize="15sp" />
+                            <TextView
+                                android:id="@+id/comp_name2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:maxLines="1"
+                                android:text="Company Name"
+                                android:textColor="@color/Black"
+                                android:textSize="20sp" />
 
-            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/post2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Position"
+                                android:textAlignment="center"
+                                android:textColor="#34deeb"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
 
 
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Companies"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/trans"
+        android:elevation="5dp"
+        android:outlineAmbientShadowColor="@color/trans"
+        android:outlineSpotShadowColor="@color/trans"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/po2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="temp"
+                android:textColor="@color/grey_font"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/Companies"
+                tools:layout_editor_absoluteX="0dp" />
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
 
 
-    </LinearLayout>
-    </FrameLayout>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

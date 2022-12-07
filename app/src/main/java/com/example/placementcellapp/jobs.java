@@ -30,9 +30,7 @@ public class jobs extends Fragment {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.activity_apply,container,false);
         recyclerView = root.findViewById(R.id.recyclerview);
         searchView = root.findViewById(R.id.search);
-
         searchView.clearFocus();
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -45,7 +43,6 @@ public class jobs extends Fragment {
                 return true;
             }
         });
-
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(gridLayoutManager);
         dataList = new ArrayList<>();
