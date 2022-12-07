@@ -53,11 +53,11 @@ public class signup extends AppCompatActivity {
         button.setOnClickListener(v -> openDashboard());
 
                         Log.d("Hello","done");
-        instituteEmail = findViewById(id.instEmail);
-        password = findViewById(id.Password);
-        name = findViewById(id.name);
-        mobile = findViewById(id.mobile);
-        login = findViewById(id.Login);
+        instituteEmail = findViewById(R.id.instEmail);
+        password = findViewById(R.id.Password);
+        name = findViewById(R.id.name);
+        mobile = findViewById(R.id.mobile);
+        login = findViewById(R.id.Login);
         password.setOnTouchListener((view, motionEvent) -> {
             final int Right = 2;
 
@@ -132,10 +132,11 @@ public class signup extends AppCompatActivity {
 
         mAuth.createUserWithEmailAndPassword(InstituteEmail, Password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
+                FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
 
                 students information = new students(Name,InstituteEmail,Mobile);
                 Toast.makeText(signup.this, "Registration Completed", Toast.LENGTH_SHORT).show();
-                FirebaseDatabase.getInstance().getReference().child("Users").child(Name).setValue(information);
+                FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid().toString()).setValue(information);
                 openDashboard();
             } else {
 
