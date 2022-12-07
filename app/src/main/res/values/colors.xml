@@ -11,6 +11,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#75b2de</color>
     <color name="trans">#70FFFFFF</color>
+    <color name="lavender">#8692F7</color>
     <color name="transparent">#00FFFFFF</color>
 
 </resources>

@@ -9,4 +9,11 @@
     <string name="password">Password</string>
     <string name="already_registered">Already Registered</string>
     <string name="sign_up_button">SIGN UP</string>
+    <string name="adobe">Adobe</string>
+    <string name="google">Google</string>
+    <string name="sachs">Goldmann Sachs</string>
+    <string name="twitter">Twitter</string>
+    <string name="mworks">Mathworks</string>
+    <string name="adobedesc">· Strong working knowledge and understanding of HTML and JavaScript.\n\n· Practical understanding of code flow and debug capabilities. Knowledge on JQuery, Angular JS, and Any JS Framework would be preferred.\n\n· Working knowledge of API (Application Programming Interface).\n\n· Understanding of Third Party Data Exchange and ETLA processes.\n\n· Experience working with data warehouses, including writing custom SQL queries.\n\n· Experience using web analytics tools (e.g., Site Catalyst, Google Analytics, etc.) will be an added advantage\n\n<b>Type:</b> Contractual / Temporary\n\n<b>CONTRACT POSITION</b>\n<b>Experience:</b> 6 Months - 1 Year\n\n<b>Notice Period:</b> 30 Days and Less\n\n<b>Mandatory Skills:</b>\nHTML, CSS, JavaScript, Database knowledge (SQL), Debugging/troubleshooting knowledge,Excellent Communications skills</string>
+    <string name="googledesc">· Strong working knowledge and understanding of HTML and JavaScript.\n\n· Practical understanding of code flow and debug capabilities. Knowledge on JQuery, Angular JS, and Any JS Framework would be preferred.\n\n· Working knowledge of API (Application Programming Interface).\n\n· Understanding of Third Party Data Exchange and ETLA processes.\n\n· Experience working with data warehouses, including writing custom SQL queries.\n\n· Experience using web analytics tools (e.g., Site Catalyst, Google Analytics, etc.) will be an added advantage\n\n<b>Type:</b> Contractual / Temporary\n\n<b>CONTRACT POSITION</b>\n<b>Experience:</b> 6 Months - 1 Year\n\n<b>Notice Period:</b> 30 Days and Less\n\n<b>Mandatory Skills:</b>\nHTML, CSS, JavaScript, Database knowledge (SQL), Debugging/troubleshooting knowledge,Excellent Communications skills</string>
 </resources>

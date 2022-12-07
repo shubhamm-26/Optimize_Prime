@@ -60,11 +60,11 @@ public class nav_drawer extends AppCompatActivity
                         break;
                     }
                     case 2:{
-                        fragmentClass = applied_jobs.class;
+                        fragmentClass =apply.class;
                         break;
                     }
                     case 3:{
-                        fragmentClass = apply.class;
+                        fragmentClass = applied_jobs.class;
                         break;
                     }
 
@@ -104,7 +104,6 @@ public class nav_drawer extends AppCompatActivity
                     public void onDrawerClosed() {
 
                     }
-
                     @Override
                     public void onDrawerStateChanged(int newState) {
                         System.out.println("State "+newState);
