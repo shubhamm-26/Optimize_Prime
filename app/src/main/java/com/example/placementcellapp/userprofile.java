@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class userprofile extends Fragment {
     @Nullable
     Button Logout;
-    TextView edit;
+    TextView edit,name,student_id;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,17 +42,23 @@ public class userprofile extends Fragment {
         });
 
         edit = root.findViewById(R.id.edit);
-
+        name=root.findViewById(R.id.Name);
+        student_id=root.findViewById(R.id.ID);
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         String id=user.getUid();
-        FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        FirebaseDatabase.getInstance().getReference().child("Users").child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (!task.isSuccessful()) {
                     Log.e("firebase", "Error getting data", task.getException());
                 }
                 else {
-                    Log.d("firebase", String.valueOf(task.getResult().getValue().toString()));
+                    name.setText(task.getResult().child("name").getValue().toString());
+                    String a=task.getResult().child("instituteEmail").getValue().toString();
+                    student_id.setText(a.substring(0,9));
+
+
+
                 }
             }
         });

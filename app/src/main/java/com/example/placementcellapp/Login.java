@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -34,13 +35,15 @@ public class Login extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
-    FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+    mAuth=FirebaseAuth.getInstance();
+    FirebaseUser user=mAuth.getCurrentUser();
 
     if(user!=null){
-      startActivity(new Intent(Login.this,dashboard.class));
+      startActivity(new Intent(Login.this,nav_drawer.class));
       finish();
     }
+    else{
+
 
 
 
@@ -100,7 +103,6 @@ public class Login extends AppCompatActivity {
       }
     });
 
-    mAuth = FirebaseAuth.getInstance();
 
     login_button.setOnClickListener(view ->{
       loginUser();
@@ -110,11 +112,13 @@ public class Login extends AppCompatActivity {
       startActivity(new Intent(Login.this,signup.class));
     });
 
+    }
   }
 
   private void loginUser(){
     String StudentID = student_id.getText().toString();
     String Password = pass.getText().toString();
+    Log.d("Hello",StudentID+" "+Password);
 
     if(TextUtils.isEmpty(StudentID)){
       student_id.setError("Enter a Valid ID");
