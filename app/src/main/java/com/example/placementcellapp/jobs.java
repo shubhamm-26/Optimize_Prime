@@ -1,28 +1,35 @@
 package com.example.placementcellapp;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class jobs extends AppCompatActivity {
+public class jobs extends Fragment {
     RecyclerView recyclerView;
     List<DataClass> dataList;
     Adapter adapter;
     DataClass androidData;
     SearchView searchView;
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
-        setContentView(R.layout.activity_apply);
-        recyclerView = findViewById(R.id.recyclerview);
-        searchView = findViewById(R.id.search);
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.activity_apply,container,false);
+        recyclerView = root.findViewById(R.id.recyclerview);
+        searchView = root.findViewById(R.id.search);
 
         searchView.clearFocus();
 
@@ -39,7 +46,7 @@ public class jobs extends AppCompatActivity {
             }
         });
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(jobs.this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 1);
         recyclerView.setLayoutManager(gridLayoutManager);
         dataList = new ArrayList<>();
 
@@ -73,10 +80,12 @@ public class jobs extends AppCompatActivity {
         androidData = new DataClass("Mathworks",R.string.mworks,"System Manager",R.drawable.mathworks);
         dataList.add(androidData);
 
-        adapter = new Adapter(jobs.this,dataList);
+        adapter = new Adapter(getActivity(),dataList);
         recyclerView.setAdapter(adapter);
-
+        return root;
     }
+
+
 
     private void searchList(String text){
         List<DataClass> dataSearchList = new ArrayList<>();

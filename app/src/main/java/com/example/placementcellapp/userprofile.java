@@ -33,6 +33,7 @@ public class userprofile extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.userprofile,container,false);
+
         Logout = root.findViewById(R.id.Logout);
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +81,7 @@ public class userprofile extends Fragment {
     private void openlogin()
     {
         Intent intent = new Intent(getActivity(),Login.class);
+        FirebaseAuth.getInstance().signOut();
         startActivity(intent);
 
     }

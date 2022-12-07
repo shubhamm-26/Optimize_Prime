@@ -1,5 +1,6 @@
 package com.example.placementcellapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -27,7 +28,7 @@ public class nav_drawer extends AppCompatActivity
         setContentView(R.layout.navigation);
         sNavigationDrawer = findViewById(R.id.nav_drawer);
         List<MenuItem> menuItems = new ArrayList<>();
-        menuItems.add(new MenuItem("Home",R.drawable.bg));
+        menuItems.add(new MenuItem("Home",R.color.white));
         menuItems.add(new MenuItem("Profile",R.drawable.bg));
         menuItems.add(new MenuItem("Apply For jobs",R.drawable.bg));
         menuItems.add(new MenuItem("Applied Jobs",R.drawable.bg));
@@ -60,11 +61,11 @@ public class nav_drawer extends AppCompatActivity
                         break;
                     }
                     case 2:{
-                        fragmentClass =apply.class;
+                        fragmentClass =jobs.class;
                         break;
                     }
                     case 3:{
-                        fragmentClass = applied_jobs.class;
+                        startActivity(new Intent(nav_drawer.this,applied_jobs.class));
                         break;
                     }
 

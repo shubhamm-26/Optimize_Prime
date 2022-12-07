@@ -1,7 +1,7 @@
 package com.example.placementcellapp;
 
 public class students {
-    String Name, instituteEmail, Mobile;
+    String Name, instituteEmail, Mobile,arr;
 
     public String getName() {
         return Name;
@@ -27,9 +27,18 @@ public class students {
         Mobile = mobile;
     }
 
+    public String getArr() {
+        return arr;
+    }
+
+    public void setArr(String arr) {
+        this.arr = arr;
+    }
+
     public students(String name, String instituteEmail, String mobile) {
         this.Name = name;
         this.instituteEmail = instituteEmail;
         this.Mobile = mobile;
+        this.arr=null;
     }
 }
