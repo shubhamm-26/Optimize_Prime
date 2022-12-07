@@ -20,8 +20,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class dashboard extends Fragment
-{
+public class dashboard extends Fragment {
         TabLayout tabLayout;
         ViewPager2 viewPager2;
         TextView link;
@@ -73,4 +72,5 @@ public class dashboard extends Fragment
                 link.setMovementMethod(LinkMovementMethod.getInstance());
 
                 return root;
-        }}
+        }
+}
