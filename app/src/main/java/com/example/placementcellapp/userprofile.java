@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,7 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class userprofile extends Fragment {
     @Nullable
     Button Logout;
-    TextView edit,name,student_id;
+    TextView edit,name,student_id,skills,git,linkedin;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,6 +46,10 @@ public class userprofile extends Fragment {
         edit = root.findViewById(R.id.edit);
         name=root.findViewById(R.id.Name);
         student_id=root.findViewById(R.id.ID);
+        skills = root.findViewById(R.id.skills);
+        git = root.findViewById(R.id.github_profile);
+        linkedin = root.findViewById(R.id.testlink);
+
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
         String id=user.getUid();
         FirebaseDatabase.getInstance().getReference().child("Users").child(id).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
@@ -55,6 +60,9 @@ public class userprofile extends Fragment {
                 }
                 else {
                     name.setText(task.getResult().child("name").getValue().toString());
+                    skills.setText(task.getResult().child("skills").getValue().toString());
+                    git.setText(task.getResult().child("github").getValue().toString());
+                    linkedin.setText(task.getResult().child("linkedIn").getValue().toString());
                     String a=task.getResult().child("instituteEmail").getValue().toString();
                     student_id.setText(a.substring(0,9));
 
