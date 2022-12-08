@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/profilecard"
         android:layout_width="333dp"
-        android:layout_height="361dp"
+        android:layout_height="366dp"
         android:layout_marginBottom="124dp"
         android:elevation="5dp"
         android:outlineAmbientShadowColor="@color/trans"
@@ -27,80 +27,128 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/LinkedIn"
+                android:id="@+id/testlink"
+                android:layout_width="284dp"
+                android:layout_height="42dp"
+                android:autofillHints=""
+                android:background="@drawable/box"
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:fontFamily="@font/avenir"
+                android:hint="linkedin"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LinkedIn_profile" />
+
+            <TextView
+                android:id="@+id/LinkedIn_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="5dp"
+                android:padding="10dp"
+                android:background="@drawable/box6"
                 android:text="LinkedIn Profile"
                 android:textColor="@color/blue"
                 android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.082"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.122" />
+                app:layout_constraintVertical_bias="0.051" />
 
             <TextView
-                android:id="@+id/Projects"
+                android:id="@+id/gittext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/box6"
                 android:elevation="5dp"
-                android:text="Projects"
+                android:padding="10dp"
+                android:text="Github"
                 android:textColor="@color/blue"
-                android:textSize="15dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintHorizontal_bias="0.063"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/LinkedIn"
-                app:layout_constraintVertical_bias="0.184" />
+                app:layout_constraintTop_toTopOf="@id/LinkedIn_profile"
+                app:layout_constraintVertical_bias="0.361" />
 
             <TextView
-                android:id="@+id/Posts"
+                android:id="@+id/github_profile"
+                android:layout_width="284dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="108dp"
+                android:autofillHints=""
+                android:background="@drawable/box"
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:fontFamily="@font/avenir"
+                android:hint="Github"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LinkedIn_profile" />
+
+            <TextView
+                android:id="@+id/skillstext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="92dp"
+                android:background="@drawable/box6"
                 android:elevation="5dp"
-                android:text="Posts/honours"
+                android:padding="10dp"
+                android:text="Skills"
                 android:textColor="@color/blue"
-                android:textSize="15dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.073"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/Certificate"
-                app:layout_constraintVertical_bias="0.359" />
+                app:layout_constraintTop_toBottomOf="@+id/gittext"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
-                android:id="@+id/Certificate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="5dp"
-                android:text="Certificates"
-                android:textColor="@color/blue"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/skills"
+                android:layout_width="284dp"
+                android:layout_height="42dp"
+                android:autofillHints=""
+                android:background="@drawable/box"
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:fontFamily="@font/avenir"
+                android:hint="Skills"
+                android:orientation="vertical"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:scrollbars="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/Projects"
-                app:layout_constraintVertical_bias="0.23" />
+                app:layout_constraintTop_toBottomOf="@+id/skillstext" />
 
-            <TextView
-                android:id="@+id/Experience"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:elevation="5dp"
-                android:text="Experience/internships"
-                android:textColor="@color/blue"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/Posts"
-                app:layout_constraintVertical_bias="0.594" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -161,7 +209,7 @@
                     android:id="@+id/image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/google"></ImageView>
+                    android:src="@drawable/img"></ImageView>
 
             </androidx.cardview.widget.CardView>
 

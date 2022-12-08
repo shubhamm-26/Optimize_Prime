@@ -1,7 +1,7 @@
 package com.example.placementcellapp;
 
 public class students {
-    String Name, instituteEmail, Mobile,arr;
+    String Name, instituteEmail, Mobile,arr,Skills,LinkedIn,Github;
 
     public String getName() {
         return Name;
@@ -27,6 +27,30 @@ public class students {
         Mobile = mobile;
     }
 
+    public String getSkills() {
+        return Skills;
+    }
+
+    public void setSkills(String skills) {
+        Skills = skills;
+    }
+
+    public String getGithub() {
+        return Github;
+    }
+
+    public void setGithub(String github) {
+        Github = github;
+    }
+
+    public String getLinkedIn() {
+        return LinkedIn;
+    }
+
+    public void setLinkedIn(String linkedIn) {
+        LinkedIn = linkedIn;
+    }
+
     public String getArr() {
         return arr;
     }
@@ -35,10 +59,13 @@ public class students {
         this.arr = arr;
     }
 
-    public students(String name, String instituteEmail, String mobile) {
+    public students(String name, String instituteEmail, String mobile,String skills,String github,String linkedIn) {
         this.Name = name;
         this.instituteEmail = instituteEmail;
         this.Mobile = mobile;
+        this.Skills = skills;
+        this.LinkedIn = linkedIn;
+        this.Github=github;
         this.arr=null;
     }
 }

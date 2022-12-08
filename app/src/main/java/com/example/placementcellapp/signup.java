@@ -35,13 +35,14 @@ import java.util.Objects;
 
 public class signup extends AppCompatActivity {
 
-    EditText instituteEmail, password,name,mobile;
+    EditText instituteEmail, password,name,mobile,skills,linkedin,github;
     TextView login;
     boolean passwordVisible;
     FirebaseAuth mAuth;
 
     DatabaseReference firebaseDatabase;
 
+    @SuppressLint({})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +59,9 @@ public class signup extends AppCompatActivity {
         name = findViewById(R.id.name);
         mobile = findViewById(R.id.mobile);
         login = findViewById(R.id.Login);
+        skills = findViewById(id.Skills);
+        linkedin=findViewById(id.LinkedInURl);
+        github=findViewById(id.github_profile);
         password.setOnTouchListener((view, motionEvent) -> {
             final int Right = 2;
 
@@ -99,6 +103,9 @@ public class signup extends AppCompatActivity {
         String Password = password.getText().toString();
         String Mobile = mobile.getText().toString();
         String Name = name.getText().toString();
+        String Skills = skills.getText().toString();
+        String Github = github.getText().toString();
+        String LinkedIn = linkedin.getText().toString();
 
         if(TextUtils.isEmpty(InstituteEmail)){
             instituteEmail.setError("Enter Valid Student ID");
@@ -115,12 +122,12 @@ public class signup extends AppCompatActivity {
             mobile.setError("Mobile Number should be 10 digits");
             mobile.requestFocus();
         }
-        else if(TextUtils.isEmpty(Name)){
+        else if(TextUtils.isEmpty(Name) &&TextUtils.isEmpty(Skills)){
             name.setError("This field is required");
             name.requestFocus();
         }
         else{
-            sign_up(Name,Mobile,InstituteEmail,Password);
+            sign_up(Name,Mobile,InstituteEmail,Password,Skills,Github,LinkedIn);
         }
     }
 
@@ -128,13 +135,13 @@ public class signup extends AppCompatActivity {
         Intent intent = new Intent(this, dashboard.class);
         startActivity(intent);
     }
-    public void sign_up(String Name,String Mobile,String InstituteEmail,String Password){
+    public void sign_up(String Name,String Mobile,String InstituteEmail,String Password,String Skills,String LinkedIn,String Github){
 
         mAuth.createUserWithEmailAndPassword(InstituteEmail, Password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                students information = new students(Name,InstituteEmail,Mobile);
+                students information = new students(Name,InstituteEmail,Mobile,Skills,LinkedIn,Github);
                 Toast.makeText(signup.this, "Registration Completed", Toast.LENGTH_SHORT).show();
                 FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid().toString()).setValue(information);
                 openDashboard();

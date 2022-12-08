@@ -26,16 +26,19 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="333dp"
-        android:layout_height="458dp"
+        android:layout_height="600dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.669"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/trans"
         app:cardElevation="5dp"
-        app:cardUseCompatPadding="true">
+        app:cardUseCompatPadding="true"
+        android:outlineAmbientShadowColor="@color/trans"
+        android:outlineSpotShadowColor="@color/trans"
+        android:scrollbars="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -46,6 +49,7 @@
                 android:id="@+id/instEmail"
                 android:layout_width="288dp"
                 android:layout_height="51dp"
+                android:autofillHints=""
                 android:backgroundTint="@color/black"
                 android:ems="10"
                 android:fontFamily="@font/avenir"
@@ -62,13 +66,14 @@
                 app:layout_constraintHorizontal_bias="0.615"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.258"
-                android:autofillHints="" />
+                app:layout_constraintVertical_bias="0.152" />
+
 
             <EditText
                 android:id="@+id/mobile"
                 android:layout_width="288dp"
                 android:layout_height="51dp"
+                android:autofillHints=""
                 android:backgroundTint="@color/black"
                 android:ems="10"
                 android:fontFamily="@font/avenir"
@@ -82,17 +87,15 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.615"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.443"
-                android:autofillHints="" />
+                app:layout_constraintVertical_bias="0.386" />
 
             <EditText
                 android:id="@+id/name"
                 android:layout_width="288dp"
                 android:layout_height="51dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="15dp"
                 android:autofillHints=""
                 android:backgroundTint="@color/black"
                 android:ems="10"
@@ -107,17 +110,18 @@
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/instEmail"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.615"
+                app:layout_constraintHorizontal_bias="0.538"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.518" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <EditText
                 android:id="@+id/Password"
                 android:layout_width="288dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="248dp"
+                android:layout_marginTop="144dp"
                 android:layout_marginEnd="8dp"
+                android:autofillHints=""
                 android:backgroundTint="@color/black"
                 android:drawableEnd="@drawable/password_invisible"
                 android:ems="10"
@@ -128,11 +132,77 @@
                 android:paddingEnd="20dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/Skills"
+                android:layout_width="288dp"
+                android:layout_height="51dp"
+                android:autofillHints=""
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:fontFamily="@font/avenir"
+                android:hint="Skills"
+                android:inputType="textWebEditText"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.615"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:autofillHints="" />
+                app:layout_constraintVertical_bias="0.765" />
+
+            <EditText
+                android:id="@+id/github_profile"
+                android:layout_width="288dp"
+                android:layout_height="51dp"
+                android:autofillHints=""
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:fontFamily="@font/avenir"
+                android:hint="Github profile URL"
+                android:inputType="textWebEditText"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.645" />
+
+            <EditText
+                android:id="@+id/LinkedInURl"
+                android:layout_width="288dp"
+                android:layout_height="51dp"
+                android:autofillHints=""
+                android:backgroundTint="@color/black"
+                android:ems="10"
+                android:fontFamily="@font/avenir"
+                android:hint="Linked In URL"
+                android:inputType="textWebEditText"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.518" />
 
             <Button
                 android:id="@+id/signup"
@@ -149,9 +219,10 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.57"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Password"
-                app:layout_constraintVertical_bias="0.013" />
+                app:layout_constraintVertical_bias="0.803" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -165,28 +236,32 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.22"
+                app:layout_constraintHorizontal_bias="0.103"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.959" />
+                app:layout_constraintVertical_bias="0.97" />
 
             <TextView
                 android:id="@+id/Login"
                 android:layout_width="104dp"
                 android:layout_height="34dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/avenir"
+                android:gravity="center"
                 android:text="@string/login"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
