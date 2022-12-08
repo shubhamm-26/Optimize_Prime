@@ -65,9 +65,6 @@ public class userprofile extends Fragment {
                     linkedin.setText(task.getResult().child("linkedIn").getValue().toString());
                     String a=task.getResult().child("instituteEmail").getValue().toString();
                     student_id.setText(a.substring(0,9));
-
-
-
                 }
             }
         });
